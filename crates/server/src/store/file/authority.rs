@@ -666,7 +666,6 @@ impl Authority for FileAuthority {
         let dnskey = Record::from_rdata(
             self.origin.clone().into(),
             zone_ttl,
-            RecordType::DNSSEC(DNSSECRecordType::DNSKEY),
             RData::DNSSEC(DNSSECRData::DNSKEY(dnskey)),
         );
 
