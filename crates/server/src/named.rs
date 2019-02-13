@@ -53,11 +53,10 @@ use tokio_udp::UdpSocket;
 use trust_dns::rr::Name;
 #[cfg(feature = "dnssec")]
 use trust_dns::rr::rdata::key::KeyUsage;
-use trust_dns_server::authority::{Authority, Catalog, ZoneType};
+use trust_dns_server::authority::{Authority, AuthorityObject, Catalog, ZoneType};
 use trust_dns_server::config::{Config, ZoneConfig};
 #[cfg(any(feature = "dns-over-tls", feature = "dnssec"))]
 use trust_dns_server::config::dnssec::{self, TlsCertConfig};
-use trust_dns_server::config::{Config, ZoneConfig};
 use trust_dns_server::logger;
 use trust_dns_server::server::ServerFuture;
 use trust_dns_server::store::file::{FileAuthority, FileConfig};
